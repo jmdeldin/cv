@@ -1,0 +1,177 @@
+\documentclass[10pt]{xecv}
+% \overfullrule=5pt
+
+\author{Jon-Michael Anthony Deldin}
+% \renewcommand{\streetfield}{}
+% \renewcommand{\cityfield}{}
+% \renewcommand{\phone}{}
+
+\renewcommand{\streetfield}{}
+\renewcommand{\cityfield}{}
+\renewcommand{\phone}{}
+\renewcommand{\email}{}
+
+\usepackage{paracol}
+\setlength{\columnsep}{3in}
+\makeatletter
+\hypersetup{pdfauthor={\@author}, pdftitle={\@author's Curriculum Vitae}}
+
+\begin{document}
+
+\begin{paracol}{2}
+  \advance\columnwidth 2.5in \hsize\columnwidth
+  \xesection{Experience}
+  % @{} suppresses spaces
+  \begin{tabularx}{\columnwidth}{@{}@{}l X@{}@{}}
+    \daterange{2010-02}{present} &
+    \job{Software Developer}{Biomimicry 3.8}{Missoula, MT} \\
+    & \begin{joblist}
+      \item Developed the Biomimicry Student Design Challenge website. It
+        was a huge success with over 500 students registering in the
+        first year and over 1,200 students registering in the second year.
+
+      % 1st year: >500 students / 116 teams / 50 submissions
+      % 2nd year: 1265 students / 339 teams / 68 submissions
+
+      \begin{itemize}
+      \item I was the sole developer responsible for the client-side,
+        server-side, and system administration.
+      \item I developed the site with test-driven development using Ruby
+        on Rails, RSpec, Capybara (integration testing), Postgres,
+        Heroku, Ticketmaster/IATS (payment gateway), Memcached, and
+        Amazon Cloudfront CDN.
+    \end{itemize}
+
+    \item On AskNature.org, a database of nature-inspired designs, I optimized
+      SQL queries for drastic speedups, implemented search
+      index health monitoring, and implemented automated spam prevention and
+      detection tools.
+
+      % Our team won the 2010 Earth Award and was a finalist in the 2011
+      % INDEX Awards.
+
+    \item Designed the service-oriented architecture and internal APIs
+      for AskNature 2.0.
+    \item Developed backup, auditing, analytics, visualization, and
+      reporting tools using Ruby, bash, Graphviz, and R.
+    \end{joblist}
+  \end{tabularx}
+
+  \begin{tabularx}{\columnwidth}{@{}l X@{}}
+    \daterange{2005-05}{present} &
+    \job{Freelance Web Developer}{jmdeldin.com}{Missoula, MT} \\
+    & {\small I designed websites, transcribed mockups into XHTML and CSS,
+      developed content management systems, contributed to open-source
+      projects, and managed CentOS and Debian servers.}\vfill
+  \end{tabularx}
+
+  \begin{tabularx}{\columnwidth}{@{}l X@{}}
+    \daterange{2011-08}{2011-12} &
+    \job{Program Manager}{Spectral Fusion Designs}{Missoula, MT} \\
+    & {\small As part of a semester assignment, I managed a student-run web
+      design group. I spearheaded upgrading development practices to current
+      standards in addition to gathering requirements, setting timelines, and
+      managing client projects. } \vfill
+  \end{tabularx}
+
+  \begin{tabularx}{\columnwidth}{@{}l X@{}}
+    \daterange{2011-08}{2011-12} &
+    \job{Teaching Assistant}{University of Montana}{Missoula, MT} \\
+    & {\small I taught students in a bioinformatics lab practical Perl and
+      {\sc unix} skills for parsing and analyzing sequences, blast output, and other
+      data.} \vfill
+  \end{tabularx}
+
+  \begin{tabularx}{\columnwidth}{@{}l X@{}}
+    \daterange{2009-06}{2010-11} &
+    \job{Web Developer}{Regional Learning Project}{Missoula, MT} \\
+    & {\small I illustrated maps, produced interactive websites using PHP and
+      JavaScript, and managed older sites with Python, \texttt{sed}, and
+      friends.} \\
+  \end{tabularx}
+
+  \xesection{Education}
+  \begin{tabularx}{\columnwidth}{@{}l X@{}}
+    \daterange{2009-08}{2013-05} & \uni{University of Montana-Missoula} \\
+    & \edtitle{Master's degree in computer science} \\
+    & {\small Emphasis in human-computer interaction and machine learning}\\
+    % & {\small \emph{Emphasis:} Automated content evaluation\amp mood
+    %   classification} \\
+    & \vfill \\
+  \end{tabularx}
+
+  \begin{tabularx}{\columnwidth}{@{}l X@{}}
+    \daterange{2005-08}{2009-08} & \uni{University of Great Falls} \\
+    & \edtitle{B.A. Biology \& B.A. Chemistry} \\
+    & {\small \emph{Final project:} Literature review on systemic sclerosis}
+  \end{tabularx}
+
+\xesection{Skills}
+\begin{tabularx}{\columnwidth}{@{}l X@{}}
+  Languages (proficient) & JavaScript, Perl, PHP, Python, Ruby, sh, SQL \\
+  Languages (familiar) &  C, C++, Java, Objective-C, OCaml, Scheme \\
+  % Markup languages  & CSS, HTML, \LaTeX, XHTML, XML, XSLT, YAML\\
+  % Databases         & MySQL, Postgres, SQLite \\
+  % Operating systems & Debian, CentOS, Fedora, Mac OS X, Ubuntu \\
+  % Web servers       & Apache HTTPD, Lighttpd, nginx, Thin \\
+  Techniques & User-centered design, test-driven development \\
+\end{tabularx}
+
+  \switchcolumn
+  \footnotesize
+  % \subsection*{Professional Interests}
+  % Machine learning, natural language processing, human-computer
+  % interaction, service-oriented architecture, and data visualization
+
+  % Designing highly-usable and useful products, building tools to increase
+  % productivity, visualizing data, and designing \\developer-friendly APIs.
+
+  \subsection*{Selected Projects}
+  The following projects and others can be viewed at
+  \href{http://www.jmdeldin.com/?utm_source=cv&utm_medium=pdf&utm_content=otherproj&utm_campaign=cv-otherproj}{jmdeldin.com}
+  and on GitHub
+  \href{https://github.com/jmdeldin}{@jmdeldin}.
+
+  \subsubsection*{NLP Spam Classification}
+  For AskNature.org, I developed a na\"{i}ve Bayes classifier to detect spam
+  accounts with 95.7\% precision. I implemented a parallel
+  cross-validation algorithm to compare $n$-gram models for word,
+  character, and phonetic grams.
+
+  \subsubsection*{GrizSpace iPhone App}
+  In Human-Computer Interaction, my team developed an iPhone app for finding
+  classes on our campus. I designed the architecture, normalized the database,
+  wrote unit tests, parsed course data with Ruby, and trained my partners in
+  Git.
+
+  \subsubsection*{Interactive Hyperelasticity}
+  For Computer Simulation\amp Modeling, I created a web app to investigate the
+  impact of boundary conditions and other parameters on a hyperelastic
+  material. I used FEniCS to solve a 2D model of hyperelasticity, and then I
+  plotted the resultant deformation via Matplotlib. This was all deployed to
+  an Amazon EC2 instance.
+
+  \subsubsection*{Enron Corpus Visualization}
+  For my data visualization course, I dug through the Enron email corpus and
+  produced standalone posters of my findings. I used Ruby for preprocessing
+  2.5 GB of emails into a Postgres database, Python and Matplotlib for time
+  series, and Cytoscape for visualizing networks.
+
+  \subsubsection*{RnaSec}
+  I developed a Ruby library for manipulating RNA secondary structures
+  as tree data structures. Additionally, I developed a proof-of-concept
+  genetic algorithm to compare ligands represented as trees.
+
+  \subsubsection*{Missoula Adoptables}
+  In Software Engineering, I designed and developed a mashup website of
+  adoptable pets. I converted my Photoshop mockup to CSS and HTML, developed a
+  custom Model-View-Controller framework in \\PHP, and wrote the frontend.
+
+  \subsection*{Publications}
+  JM Deldin and M. Schuknecht.
+  \textit{Biologically Inspired Design: Computational Methods and Tools},
+  chapter The AskNature Database: Enabling Solutions in Biomimetic
+  Design. Springer, forthcoming 2013.
+\end{paracol}
+
+\end{document}
